@@ -12,4 +12,16 @@ public class TodoList {
             return false;
         }
     }
+
+    public boolean display(){
+        if (taskList.isEmpty()){
+            return false;
+        }
+        else{
+            for (String key:taskList.keySet()){
+                System.out.println(taskList.get(key));
+            }
+            return true;
+        }
+    }
 }
