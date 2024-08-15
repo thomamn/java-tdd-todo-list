@@ -67,11 +67,11 @@ public class TodoList {
     }
     // the boolean order decides which order the todo-list will be displayed
     // true corresponds to ascending, false do descending
-    public Object[] sort(boolean order) {
+    public String[] sort(boolean order) {
         if (taskList.isEmpty()) {
             return new String[]{};
         } else {
-            Object[] sorted = (Object[]) taskList.keySet().toArray();
+            String[] sorted = (String[]) taskList.keySet().toArray();
             Arrays.sort(sorted);
 
 

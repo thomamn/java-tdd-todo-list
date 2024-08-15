@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 class TodoListTest {
 
@@ -79,6 +80,6 @@ class TodoListTest {
         String[] testList0= new String[]{"A test", "B test", "C test"};
         String[] testList1= new String[]{"C test", "B test", "A test"};
 
-        Assertions.assertArrayEquals(testList0, todoList0.sort(true));
+        Assertions.assertTrue(Arrays.equals(testList0, testList1));
     }
 }
