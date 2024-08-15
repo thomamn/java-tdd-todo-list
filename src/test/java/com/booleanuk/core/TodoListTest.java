@@ -75,13 +75,17 @@ class TodoListTest {
         todoList0.add("B test");
         todoList0.add("C test");
         todoList0.add("A test");
-        todoList1.add("B test");
         todoList1.add("C test");
         todoList1.add("A test");
+        todoList1.add("B test");
         String[] testList0= new String[]{"A test", "B test", "C test"};
         String[] testList1= new String[]{"C test", "B test", "A test"};
 
         Assertions.assertArrayEquals(testList0, todoList0.sort(true));
         Assertions.assertArrayEquals(testList1, todoList0.sort(false));
+        Assertions.assertArrayEquals(todoList0.sort(false), todoList0.sort(false));
+        Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(true));
+        Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(false));
+        Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(true));
     }
 }
