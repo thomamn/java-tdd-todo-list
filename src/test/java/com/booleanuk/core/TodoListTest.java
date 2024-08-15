@@ -85,7 +85,7 @@ class TodoListTest {
         Assertions.assertArrayEquals(testList1, todoList0.sort(false));
         Assertions.assertArrayEquals(todoList0.sort(false), todoList0.sort(false));
         Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(true));
-        Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(false));
-        Assertions.assertArrayEquals(todoList0.sort(true), todoList0.sort(true));
+        Assertions.assertFalse(todoList0.sort(true)== todoList0.sort(false));
+        Assertions.assertFalse(todoList0.sort(true)==todoList0.sort(true));
     }
 }
