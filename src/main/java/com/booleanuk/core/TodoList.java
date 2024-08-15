@@ -37,4 +37,14 @@ public class TodoList {
             return false;
         }
     }
+
+    public boolean statusDisplay(String task){
+        if (taskList.containsKey(task)){
+            taskList.get(task);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

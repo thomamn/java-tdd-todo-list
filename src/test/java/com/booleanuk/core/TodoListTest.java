@@ -37,4 +37,12 @@ class TodoListTest {
         todoList.add("Test the changeStatus() method");
         Assertions.assertTrue(todoList.changeStatus("Test the changeStatus() method"));
     }
+
+    @Test
+    public void displayStatusTest() {
+        TodoList todoList=new TodoList();
+        Assertions.assertFalse(todoList.changeStatus("Test the statusDisplay() method"));
+        todoList.add("Test the statusDisplay() method");
+        Assertions.assertTrue(todoList.changeStatus("Test the statusDisplay() method"));
+    }
 }
