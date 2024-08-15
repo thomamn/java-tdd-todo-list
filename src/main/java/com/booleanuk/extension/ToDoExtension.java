@@ -10,9 +10,9 @@ public class ToDoExtension {
     // name of the task, the time it was created and status
     HashMap<String, String[]> taskList=new HashMap<String, String[]>();
 
-    public boolean add(String task, String[] info){
-        if(!taskList.containsKey(task)){
-            taskList.put(task, info);
+    public boolean add(String taskId, String[] info){
+        if(!taskList.containsKey(taskId)){
+            taskList.put(taskId, info);
             return true;
         }
         else{

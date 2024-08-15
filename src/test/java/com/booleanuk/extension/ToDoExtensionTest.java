@@ -18,7 +18,7 @@ public class ToDoExtensionTest {
         ToDoExtension todoList=new ToDoExtension();
 
         Assertions.assertTrue(todoList.add("1", new String[]{"Thing", "Time", "Incomplete"}));
-        Assertions.assertTrue(todoList.add("1", new String[]{"Thing", "Time", "Incomplete"}));
+        Assertions.assertFalse(todoList.add("1", new String[]{"Thing", "Time", "Incomplete"}));
     }
 
 
