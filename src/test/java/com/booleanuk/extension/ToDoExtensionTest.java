@@ -20,6 +20,14 @@ public class ToDoExtensionTest {
         Assertions.assertTrue(todoList.add("1", new String[]{"Thing", "Time", "Incomplete"}));
         Assertions.assertFalse(todoList.add("1", new String[]{"Thing", "Time", "Incomplete"}));
     }
+    @Test
+    public void displayTest() {
+        ToDoExtension todoList=new ToDoExtension();
+        Assertions.assertFalse(todoList.display());
+        todoList.add("1", new String[]{"Thing", "Time", "Incomplete"});
+        todoList.add("2", new String[]{"Stuff", "Period", "Incomplete"});
+        Assertions.assertTrue(todoList.display());
+    }
 
 
 }

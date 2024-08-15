@@ -33,6 +33,10 @@ public class ToDoExtension {
 
     }
 
+    public boolean changeName(String taskID, String name){
+        return true;
+    }
+
 
     public boolean changeStatus(String task){
         if(taskList.containsKey(task)){
