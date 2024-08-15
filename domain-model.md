@@ -4,7 +4,7 @@
 |             |                                |                                            | Task not in Tasks   | Return true, Task is added                   |
 |             |                                | `Display()`                                | Tasks is empty      | Return false, Print nothing                  |
 |             |                                |                                            | Tasks is not empty  | Return true, Print tasks                     |
-|             |                                | `changeStatus(String task, String status)` | Task exists         | Return true, change status of task           |
+|             |                                | `changeStatus(String task)` | Task exists         | Return true, change status of task           |
 |             |                                |                                            | Task does not exist | Return false                                 |
 |             |                                | `statusDisplay(boolean status)`            | Tasks exist         | Return true, display all tasks of given status |
 |             |                                |                                            | Tasks do not exist  | Return false, display nothing                |
@@ -12,5 +12,5 @@
 |             |                                |                                            | Task does not exist | Return false                                 |
 |             |                                | `remove(String task)`                      | Task exists         | Return true, remove task from Tasks          |
 |             |                                |                                            | Task does not exist | Return false                                 |
-|             |                                | `sort(boolean order)`                       | Tasks has values    | Return true, display tasks in given order    |
+|             |                                | `sort(boolean order)`                      | Tasks has values    | Return true, display tasks in given order    |
 |             |                                |                                            | Tasks is empty      | Return false                                 |

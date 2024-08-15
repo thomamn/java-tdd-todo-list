@@ -23,5 +23,18 @@ public class TodoList {
             }
             return true;
         }
+
+    }
+
+
+    public boolean changeStatus(String task){
+        if(taskList.containsKey(task)){
+
+            taskList.replace(task, "Complete");
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
