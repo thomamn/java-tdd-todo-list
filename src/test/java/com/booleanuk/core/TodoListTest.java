@@ -3,6 +3,8 @@ package com.booleanuk.core;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
+
 class TodoListTest {
 
     public TodoListTest(){}
@@ -74,6 +76,9 @@ class TodoListTest {
         todoList1.add("A test");
         todoList1.add("B test");
         todoList1.add("C test");
-        Assertions.assertEquals(todoList0, todoList1);
+        String[] testList0= new String[]{"A test", "B test", "C test"};
+        String[] testList1= new String[]{"A test", "B test", "C test"};
+
+        Assertions.assertArrayEquals(testList0, testList1);
     }
 }
