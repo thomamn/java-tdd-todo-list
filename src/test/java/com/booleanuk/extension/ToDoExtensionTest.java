@@ -29,6 +29,7 @@ public class ToDoExtensionTest {
         Assertions.assertTrue(todoList.display());
     }
 
+    // This test is meant to update the name of a task with a given ID, as well as its status
     @Test
     public void changeNameTest() {
         ToDoExtension todoList=new ToDoExtension();
@@ -39,6 +40,7 @@ public class ToDoExtensionTest {
         Assertions.assertTrue(todoList.taskList.get("1")[2]=="Complete");
     }
 
+    // This test is meant to show the name and time/date of a task
     @Test
     public void searchTest() {
         ToDoExtension todoList=new ToDoExtension();

@@ -8,6 +8,8 @@ import java.util.HashMap;
 public class ToDoExtension {
     // In this extended class, the key is now the ID, while the string array contains the
     // name of the task, the time it was created and status
+    // I copied the Todo-list Class and changed/added methods to fulfill the extended requirements
+    // Some of the core class methods remain as I saw no reason to remove them.
     HashMap<String, String[]> taskList=new HashMap<String, String[]>();
 
     public boolean add(String taskId, String[] info){
