@@ -1,5 +1,6 @@
 package com.booleanuk.core;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -41,13 +42,20 @@ public class TodoList {
         }
     }
 
-    public boolean statusDisplay(String task){
-        if (taskList.containsKey(task)){
-            taskList.get(task);
-            return true;
+    // the boolean order decides which status the todo-list will be displaying
+    // true corresponds to complete, false to incomplete
+    public ArrayList<String> statusDisplay(String status){
+        ArrayList<String> tasks=new ArrayList<>();
+        if (taskList.isEmpty()){
+            return tasks;
         }
         else{
-            return false;
+            for(String key:taskList.keySet()){
+                if (key==status){
+                    tasks.add(key);
+                }
+            }
+            return tasks;
         }
 
     }

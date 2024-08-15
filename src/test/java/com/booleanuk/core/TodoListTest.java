@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 class TodoListTest {
@@ -44,7 +45,8 @@ class TodoListTest {
     @Test
     public void displayStatusTest() {
         TodoList todoList=new TodoList();
-        Assertions.assertFalse(todoList.changeStatus("Test the statusDisplay() method"));
+        ArrayList<String> test0=new ArrayList<>();
+        Assertions.assertSame(test0, todoList.statusDisplay("Test the statusDisplay() method"));
         todoList.add("Test the statusDisplay() method");
         Assertions.assertTrue(todoList.changeStatus("Test the statusDisplay() method"));
     }
