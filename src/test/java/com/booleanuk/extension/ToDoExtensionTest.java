@@ -39,6 +39,14 @@ public class ToDoExtensionTest {
         Assertions.assertTrue(todoList.taskList.get("1")[2]=="Complete");
     }
 
+    @Test
+    public void searchTest() {
+        ToDoExtension todoList=new ToDoExtension();
+        String[] task=new String[]{"Thing", "Time", "Incomplete"};
+        todoList.add("1", task);
+        Assertions.assertTrue(task==todoList.findTask("1"));
+    }
+
 
 
 

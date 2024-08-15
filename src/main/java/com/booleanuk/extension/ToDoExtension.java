@@ -84,6 +84,13 @@ public class ToDoExtension {
         return taskList.containsKey(task);
     }
 
+    String[] findTask(String taskId){
+        if (!taskList.containsKey(taskId)) {
+            return new String[]{"Task not found"};
+        }
+        return taskList.get(taskId);
+    }
+
     public boolean remove(String task){
         if (taskList.containsKey(task)){
             taskList.remove(task);
