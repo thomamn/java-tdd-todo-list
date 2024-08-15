@@ -51,7 +51,7 @@ public class TodoList {
         }
         else{
             for(String key:taskList.keySet()){
-                if (key==status){
+                if (taskList.get(key)==status){
                     tasks.add(key);
                 }
             }
