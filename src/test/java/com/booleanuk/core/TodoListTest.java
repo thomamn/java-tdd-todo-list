@@ -79,7 +79,7 @@ class TodoListTest {
         todoList1.add("A test");
         String[] testList0= new String[]{"A test", "B test", "C test"};
         String[] testList1= new String[]{"C test", "B test", "A test"};
-
-        Assertions.assertEquals(Arrays.toString(testList0), Arrays.toString(todoList0.sort(true)));
+        String[] gig= todoList0.sort(true);
+        Assertions.assertArrayEquals(testList0, gig);
     }
 }
