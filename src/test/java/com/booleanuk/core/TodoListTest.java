@@ -73,7 +73,6 @@ class TodoListTest {
 
         Assertions.assertArrayEquals(new String[]{}, todoList0.sort(false));
         todoList0.add("B test");
-        String[] gig= todoList0.sort(true);
         todoList0.add("C test");
         todoList0.add("A test");
         todoList1.add("B test");
@@ -82,6 +81,6 @@ class TodoListTest {
         String[] testList0= new String[]{"A test", "B test", "C test"};
         String[] testList1= new String[]{"C test", "B test", "A test"};
 
-        Assertions.assertArrayEquals(testList0, gig);
+        Assertions.assertArrayEquals(testList0, todoList0.sort(true));
     }
 }
