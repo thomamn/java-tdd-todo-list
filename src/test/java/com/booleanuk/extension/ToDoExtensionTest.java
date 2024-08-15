@@ -29,6 +29,16 @@ public class ToDoExtensionTest {
         Assertions.assertTrue(todoList.display());
     }
 
+    @Test
+    public void changeNameTest() {
+        ToDoExtension todoList=new ToDoExtension();
+        todoList.add("1", new String[]{"Thing", "Time", "Incomplete"});
+        todoList.changeName("1", "Stuff");
+        todoList.changeStatus("1");
+        Assertions.assertTrue(todoList.taskList.get("1")[0]=="Stuff");
+        Assertions.assertTrue(todoList.taskList.get("1")[2]=="Complete");
+    }
+
 
 
 
