@@ -77,7 +77,7 @@ class TodoListTest {
         todoList1.add("B test");
         todoList1.add("C test");
         String[] testList0= new String[]{"A test", "B test", "C test"};
-        String[] testList1= new String[]{"A test", "B test", "C test"};
+        String[] testList1= new String[]{"C test", "B test", "A test"};
 
         Assertions.assertArrayEquals(testList0, testList1);
     }
