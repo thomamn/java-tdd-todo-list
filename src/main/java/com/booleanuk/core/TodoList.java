@@ -71,9 +71,13 @@ public class TodoList {
         if (taskList.isEmpty()) {
             return new String[]{};
         } else {
-            String[] sorted = (String[]) taskList.keySet().toArray();
-            Arrays.sort(sorted);
 
+            String[] sorted = new String[taskList.size()];
+            int i=0;
+            for (String key: taskList.keySet()){
+                sorted[i]=key;
+                i+=1;
+            }
 
 
             if (order == true) {
