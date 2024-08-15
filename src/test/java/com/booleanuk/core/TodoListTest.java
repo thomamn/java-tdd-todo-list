@@ -40,6 +40,7 @@ class TodoListTest {
         Assertions.assertFalse(todoList.changeStatus("Test the changeStatus() method"));
         todoList.add("Test the changeStatus() method");
         Assertions.assertTrue(todoList.changeStatus("Test the changeStatus() method"));
+        Assertions.assertSame("Complete", todoList.taskList.get("Test the changeStatus() method"));
     }
 
     @Test
