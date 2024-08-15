@@ -57,6 +57,11 @@ class TodoListTest {
 
         test0.add("Test the statusDisplay() method");
         Assertions.assertTrue(test0.containsAll(status0) && status0.containsAll(test0));
+
+        todoList.changeStatus("Test the statusDisplay() method");
+        ArrayList<String> status1= todoList.statusDisplay("Complete");
+        Assertions.assertTrue(test0.containsAll(status1) && status1.containsAll(test0));
+
     }
 
     @Test
