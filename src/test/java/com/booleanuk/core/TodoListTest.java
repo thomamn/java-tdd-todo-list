@@ -53,4 +53,13 @@ class TodoListTest {
         todoList.add("Test search() method");
         Assertions.assertTrue(todoList.search("Test search() method"));
     }
+
+    @Test
+    public void removeTest() {
+        TodoList todoList=new TodoList();
+        Assertions.assertFalse(todoList.remove("Test remove() method"));
+        todoList.add("Test remove() method");
+        Assertions.assertTrue(todoList.search("Test remove() method"));
+        Assertions.assertFalse(todoList.remove("Test remove() method"));
+    }
 }
