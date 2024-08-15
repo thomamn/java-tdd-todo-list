@@ -62,4 +62,18 @@ class TodoListTest {
         Assertions.assertTrue(todoList.remove("Test remove() method"));
         Assertions.assertFalse(todoList.remove("Test remove() method"));
     }
+
+    @Test
+    public void sortTest() {
+        TodoList todoList0=new TodoList();
+        TodoList todoList1=new TodoList();
+        Assertions.assertFalse(todoList0.sort(false));
+        todoList0.add("A test");
+        todoList0.add("B test");
+        todoList0.add("C test");
+        todoList1.add("A test");
+        todoList1.add("B test");
+        todoList1.add("C test");
+        Assertions.assertEquals(todoList0, todoList1);
+    }
 }
