@@ -1,6 +1,7 @@
 package com.booleanuk.core;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 public class TodoList {
     HashMap<String, String> taskList=new HashMap<String, String>();
@@ -66,23 +67,22 @@ public class TodoList {
     }
     // the boolean order decides which order the todo-list will be displayed
     // true corresponds to ascending, false do descending
-    public boolean sort(boolean order) {
+    public String[] sort(boolean order) {
         if (taskList.isEmpty()) {
-            return false;
+            return new String[]{};
         } else {
             String[] sorted = (String[]) taskList.keySet().toArray();
             Arrays.sort(sorted);
 
-            if (order == false) {
-                for (int i = sorted.length - 1; i >= 0; i--) {
-                    System.out.println(sorted[i]);
-                }
-            } else if (order == true) {
-                for (int i = 0; i < sorted.length; i++) {
-                    System.out.println(sorted[i]);
-                }
+
+
+            if (order == true) {
+                Arrays.sort(sorted);
+            } else if (order == false) {
+                Arrays.sort(sorted, Comparator.reverseOrder());
+
             }
-            return true;
+            return sorted;
         }
     }
 }
