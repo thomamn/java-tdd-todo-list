@@ -37,7 +37,7 @@ public class ToDoExtension {
 
         if(taskList.containsKey(taskId)){
             String [] update=taskList.get(taskId);
-            update[2]=name;
+            update[0]=name;
             taskList.replace(taskId, update);
             return true;
         }
