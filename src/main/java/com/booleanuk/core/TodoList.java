@@ -61,6 +61,9 @@ public class TodoList {
     }
 
     public boolean search(String task){
+        if (!taskList.containsKey(task)) {
+            System.out.println("Task not found");
+        }
         return taskList.containsKey(task);
     }
 
