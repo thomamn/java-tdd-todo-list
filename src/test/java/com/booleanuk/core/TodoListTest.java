@@ -59,7 +59,7 @@ class TodoListTest {
         TodoList todoList=new TodoList();
         Assertions.assertFalse(todoList.remove("Test remove() method"));
         todoList.add("Test remove() method");
-        Assertions.assertTrue(todoList.search("Test remove() method"));
+        Assertions.assertTrue(todoList.remove("Test remove() method"));
         Assertions.assertFalse(todoList.remove("Test remove() method"));
     }
 }
