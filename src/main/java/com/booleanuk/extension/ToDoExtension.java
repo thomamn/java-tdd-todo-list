@@ -33,8 +33,17 @@ public class ToDoExtension {
 
     }
 
-    public boolean changeName(String taskID, String name){
-        return true;
+    public boolean changeName(String taskId, String name){
+
+        if(taskList.containsKey(taskId)){
+            String [] update=taskList.get(taskId);
+            update[2]=name;
+            taskList.replace(taskId, update);
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 
