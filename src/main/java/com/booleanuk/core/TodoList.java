@@ -46,5 +46,10 @@ public class TodoList {
         else{
             return false;
         }
+
+    }
+
+    public boolean search(String task){
+        return taskList.containsKey(task);
     }
 }
