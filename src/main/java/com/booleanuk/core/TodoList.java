@@ -4,7 +4,7 @@ public class TodoList {
     HashMap<String, String> taskList=new HashMap<String, String>();
 
     public boolean add(String task){
-        if(!taskList.containsKey(task)){
+        if(!this.search(task)){
             taskList.put(task, "Incomplete");
             return true;
         }
