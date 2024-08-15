@@ -46,7 +46,7 @@ class TodoListTest {
     public void displayStatusTest() {
         TodoList todoList=new TodoList();
         ArrayList<String> test0=new ArrayList<>();
-        Assertions.assertSame(test0, todoList.statusDisplay("Test the statusDisplay() method"));
+        Assertions.assertTrue(test0== todoList.statusDisplay("Test the statusDisplay() method"));
         todoList.add("Test the statusDisplay() method");
         Assertions.assertTrue(todoList.changeStatus("Test the statusDisplay() method"));
     }
